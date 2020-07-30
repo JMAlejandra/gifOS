@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>gifOS</title>
+
+		<link
+			rel="shortcut icon"
+			href="./images/nyancat.ico"
+			type="image/x-icon"
+		/>
+
+		<link rel="stylesheet" href="./styles/style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body onload="initializeGifs(4,1)">
+		<div class="main-container light-theme" id="main-container">
+			<header class="header">
+				<div class="header-title">
+					<span class="header-title-text">
+						¡Bienvenidos/as a Guifos.com! ——————Donde los gifs
+						están.////// Número de visitas: 12.765.803
+					</span>
+				</div>
+				<div class="margin-container">
+					<div class="navigation">
+						<img
+							src="./images/gifOF_logo.png"
+							alt="gifOS-logo"
+							class="logo"
+							id="logo"
+						/>
+
+						<div class="nav-options">
+							<div class="nav-button" id="create-guifo">
+								<a href="./pages/guifos.html">Crear Guifos</a>
+							</div>
+							<div class="theme-button" id="theme-button">
+								<button class="nav-button" id="themesButton">
+									Elegir Tema
+								</button>
+								<div class="dropdown-img" id="themesDropdown">
+									<img src="./images/dropdown.svg" alt="dropdown" />
+								</div>
+								<div class="themes nodisplay" id="themes">
+									<a id="light-theme" class="theme-option">
+										<span class="theme-span">S</span>ailor Day
+									</a>
+									<a id="dark-theme" class="theme-option">
+										<span class="theme-span">S</span>ailor Night
+									</a>
+								</div>
+							</div>
+							<a href="./pages/guifos.html" class="nav-link">
+								<span class="underlined-letter">M</span>is Guifos
+							</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<div class="margin-container">
+				<section class="search" id="search-container">
+					<p class="search-top">Buscar</p>
+					<div class="search-inputs" id="search-inputs">
+						<input
+							type="text"
+							name="search-input"
+							id="search-input"
+							class="search-text"
+							placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
+						/>
+						<button id="search-button" class="search-button">
+							<img
+								src="./images/lupa.svg"
+								alt="search-icon"
+								class="zoom-icon"
+							/>
+							<span>Buscar</span>
+						</button>
+					</div>
+
+					<div class="search-results nodisplay" id="search-results">
+						<div class="result" id="suggestion1">
+							<p></p>
+						</div>
+						<div class="result" id="suggestion2">
+							<p></p>
+						</div>
+						<div class="result" id="suggestion3">
+							<p></p>
+						</div>
+					</div>
+				</section>
+
+				<section class="suggestions" id="suggestions">
+					<div class="title-bar">Hoy te sugerimos:</div>
+					<div class="suggestions-grid" id="suggestions-grid"></div>
+				</section>
+
+				<section class="suggestions-option-buttons"></section>
+
+				<section class="results-container" id="results-container">
+					<div class="title-bar" id="results-title-bar">
+						<p>Tendencias:</p>
+					</div>
+					<div class="gif-results"></div>
+				</section>
+			</div>
+		</div>
+
+		<script src="./scripts/variables.js"></script>
+		<script src="./scripts/functions.js"></script>
+		<script src="./scripts/events.js"></script>
+	</body>
+</html>

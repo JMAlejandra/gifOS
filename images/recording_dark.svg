@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>recording_dark</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="gifOS_estados_theme2" transform="translate(-337.000000, -2000.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="captura" transform="translate(100.000000, 1946.000000)">
+                <g id="boton_stop" transform="translate(229.000000, 46.000000)">
+                    <path d="M19,10 L17,10 L15,10 L15,8 L17,8 L19,8 L21,8 L21,10 L19,10 Z M17,17 L19,17 L19,19 L17,19 L17,17 Z M12.5,12.5 L12.5,15 L10,15 L10,12.5 L10,10 L12.5,10 L15,10 L15,12.5 L12.5,12.5 Z M10,17 L10,19 L10,21 L8,21 L8,19 L8,17 L8,15 L10,15 L10,17 Z M12.5,23.5 L15,23.5 L15,26 L12.5,26 L10,26 L10,23.5 L10,21 L12.5,21 L12.5,23.5 Z M17,26 L19,26 L21,26 L21,28 L19,28 L17,28 L15,28 L15,26 L17,26 Z M23.5,23.5 L23.5,21 L26,21 L26,23.5 L26,26 L23.5,26 L21,26 L21,23.5 L23.5,23.5 Z M26,17 L26,15 L28,15 L28,17 L28,19 L28,21 L26,21 L26,19 L26,17 Z M23.5,12.5 L21,12.5 L21,10 L23.5,10 L26,10 L26,12.5 L26,15 L23.5,15 L23.5,12.5 Z" id="recording_dark"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Mis Guifos</title>
+
+		<link
+			rel="shortcut icon"
+			href="../images/nyancat.ico"
+			type="image/x-icon"
+		/>
+
+		<link rel="stylesheet" href="../styles/guifos_style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body onload="initializeGuifos()">
+		<div class="main-container light-theme" id="main-container">
+			<header class="header">
+				<div class="header-title">
+					<span class="header-title-text">
+						¡Bienvenidos/as a Guifos.com! ——————Donde los gifs
+						están.////// Número de visitas: 12.765.803
+					</span>
+				</div>
+				<div class="margin-container">
+					<a href="../index.html">
+						<img
+							src="../images/arrow.svg"
+							alt="return"
+							class="return-arrow"
+					/></a>
+					<div class="navigation">
+						<img
+							src="../images/gifOF_logo.png"
+							alt="gifOS-logo"
+							class="logo"
+							id="logo"
+						/>
+						<div class="nav-options">
+							<div class="nav-button" id="create-guifo">
+								<div>Crear Guifos</div>
+							</div>
+							<div class="theme-button" id="theme-button">
+								<button class="nav-button" id="themesButton">
+									Elegir Tema
+								</button>
+								<div class="dropdown-img" id="themesDropdown">
+									<img src="../images/dropdown.svg" alt="dropdown" />
+								</div>
+								<div class="themes nodisplay" id="themes">
+									<a id="light-theme" class="theme-option">
+										<span class="theme-span">S</span>ailor Day
+									</a>
+									<a id="dark-theme" class="theme-option">
+										<span class="theme-span">S</span>ailor Night
+									</a>
+								</div>
+							</div>
+							<a href="guifos.html" class="nav-link">
+								<span class="underlined-letter">M</span>is Guifos
+							</a>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="margin-container">
+				<div class="window-boxes-container">
+					<div class="window-box instructions" id="instructions">
+						<div class="window-header">
+							<span>Crear Guifos</span>
+							<img
+								src="../images/close.svg"
+								alt="close"
+								class="close nodisplay"
+							/>
+						</div>
+						<div class="inner-content-margin-short">
+							<div class="window-content">
+								<div class="window-content-title">
+									<img
+										src="../images/window_img.png"
+										alt="window-img"
+									/>
+									<div class="text-content">
+										Aquí podrás crear tus propios guifos
+									</div>
+								</div>
+								<div class="window-content-text">
+									<p class="content-paragraph">
+										Crear tu <span>guifo</span> es muy fácil, graba
+										cualquier imagen con tu cámara y obtén guifos
+										personalizados. Los pasos para crear tu guifo son:
+									</p>
+									<ul class="content-list">
+										<li class="list-item">
+											<span>1)</span> Dar permisos de acceso a la
+											cámara (sólo por el tiempo de uso)
+										</li>
+										<li class="list-item">
+											<span>2)</span> Capturar tu momento guifo
+										</li>
+										<li class="list-item">
+											<span>3)</span> Revisar el momento
+										</li>
+										<li class="list-item">
+											<span>4)</span> Listo para subir y compartir!
+										</li>
+									</ul>
+									<p class="content-paragraph">
+										¿Quieres comenzar a crear tu
+										<span>guifo</span> ahora?
+									</p>
+								</div>
+							</div>
+
+							<div class="window-buttons">
+								<div class="window-button secondary" id="inst-cancel">
+									Cancelar
+								</div>
+								<div class="window-button primary" id="inst-continue">
+									Comenzar
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="window-box video-content nodisplay"
+						id="video-active"
+					>
+						<div class="window-header">
+							<span>Un Chequeo Antes de Empezar</span>
+							<img src="../images/close.svg" alt="close" class="close" />
+						</div>
+						<div class="inner-content-margin">
+							<div class="window-content">
+								<video class="video-box"></video>
+							</div>
+							<div class="window-buttons" id="check-btn-capture">
+								<div class="window-button primary btn-camera btn-join">
+									<img src="../images/camera.svg" alt="camera" />
+								</div>
+								<div class="window-button primary btn-join">
+									Capturar
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="window-box video-content nodisplay"
+						id="video-record"
+					>
+						<div class="window-header">
+							<span>Capturando Tu Guifo</span>
+							<img src="../images/close.svg" alt="close" class="close" />
+						</div>
+						<div class="inner-content-margin">
+							<div class="window-content">
+								<video class="video-box"></video>
+							</div>
+							<div class="window-buttons record">
+								<div class="elapsed-time">
+									<span class="elapsed-time-text">00:00:00</span>
+								</div>
+
+								<div class="btn-record" id="record-btn-record">
+									<div class="window-button primary btn-camera">
+										<img src="../images/recording.svg" alt="camera" />
+									</div>
+									<div class="window-button primary">
+										Listo
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="window-box video-content nodisplay"
+						id="video-preview"
+					>
+						<div class="window-header">
+							<span>Vista Previa</span>
+							<img
+								src="../images/close.svg"
+								alt="close"
+								class="close nodisplay"
+							/>
+						</div>
+						<div class="inner-content-margin">
+							<div class="window-content">
+								<video class="video-box" autoplay loop controls></video>
+							</div>
+							<div class="window-buttons record">
+								<div class="elapsed-time">
+									<span class="elapsed-time-text">00:00:00</span>
+								</div>
+								<div class="play-button nodisplay">
+									<img src="../images/forward.svg" alt="play" />
+								</div>
+								<div class="progress-bar nodisplay" id="progress-bar">
+									<div class="playback-bar complete"></div>
+									<div class="playback-bar complete"></div>
+									<div class="playback-bar complete"></div>
+									<div class="playback-bar complete"></div>
+									<div class="playback-bar complete"></div>
+									<div class="playback-bar complete"></div>
+									<div class="playback-bar complete"></div>
+									<div class="playback-bar complete"></div>
+									<div class="playback-bar complete"></div>
+									<div class="playback-bar"></div>
+									<div class="playback-bar"></div>
+									<div class="playback-bar"></div>
+									<div class="playback-bar"></div>
+									<div class="playback-bar"></div>
+									<div class="playback-bar"></div>
+									<div class="playback-bar"></div>
+									<div class="playback-bar"></div>
+									<div class="playback-bar"></div>
+									<div class="playback-bar"></div>
+									<div class="playback-bar"></div>
+								</div>
+								<div class="btn-capture">
+									<div
+										class="window-button secondary"
+										id="preview-btn-repeat"
+									>
+										Repetir Captura
+									</div>
+									<div
+										class="window-button primary"
+										id="preview-btn-upload"
+									>
+										Subir Guifo
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						class="window-box video-content nodisplay"
+						id="gif-uploading"
+					>
+						<div class="window-header">
+							<span>Subiendo Guifo</span>
+							<img src="../images/close.svg" alt="close" class="close" />
+						</div>
+						<div class="inner-content-margin">
+							<div class="window-content">
+								<div class="image-box uploading-gif">
+									<div class="uploading-content">
+										<img
+											src="../images/globe_img.png"
+											alt="globe"
+											class="uploading-globe"
+										/>
+										<div class="content-text primary-text">
+											Estamos Subiendo tu guifo...
+										</div>
+										<div class="progress-bar" id="progress-bar-up">
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+											<div class="playback-bar"></div>
+										</div>
+										<div class="content-text secondary-text">
+											Tiempo restante:
+											<span class="strike">38 años</span> algunos
+											minutos
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="window-buttons">
+								<div
+									class="window-button secondary"
+									id="uploading-btn-cancel"
+								>
+									Cancelar
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="window-box gif-uploaded nodisplay" id="gif-uploaded">
+						<div class="window-header">
+							<span>Guifo Subido Con Éxito</span>
+							<img src="../images/close.svg" alt="close" class="close" />
+						</div>
+						<div class="inner-content-margin-short">
+							<div class="window-content uploaded">
+								<div class="content-img">
+									<img
+										src="../images/placeholder_img2.jpeg"
+										alt="uploaded-gif"
+									/>
+								</div>
+								<div class="content-buttons">
+									<div class="content-title">
+										Guifo Creado Con Éxito
+									</div>
+									<div
+										class="window-button secondary"
+										id="uploaded-btn-copy"
+									>
+										Copiar Enlace Guifo
+									</div>
+									<div
+										class="window-button secondary"
+										id="uploaded-btn-download"
+									>
+										Descargar
+									</div>
+								</div>
+							</div>
+							<div class="window-buttons">
+								<div
+									class="window-button primary"
+									id="uploaded-btn-ready"
+								>
+									Listo
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="title-bar">Mis Guifos:</div>
+
+				<div class="guifos-container"></div>
+			</div>
+		</div>
+
+		<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+		<script src="../scripts/guifosTheme.js"></script>
+		<script src="../scripts/guifos.js"></script>
+	</body>
+</html>
